@@ -1,7 +1,6 @@
 import { ChangeProfile } from "../components/ChangeProfile";
 
 export const Profile = (props) => {
-  
   return (
     <div>
       <h2>
