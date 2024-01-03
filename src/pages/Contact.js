@@ -1,4 +1,5 @@
 export const Contact = () => {
+  
   return (
     <div>
       <h2>This is CONTACT page</h2>
