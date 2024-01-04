@@ -18,7 +18,6 @@ function App() {
             path="/profile"
             element={<Profile username={username} setUsername={setUsername} />}
           />
-          <Route path="/contact" element={<Contact />} />
           <Route path="/*" element={<h1>Page not Found</h1>} />
         </Routes>
       </Router>
