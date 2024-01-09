@@ -4,25 +4,27 @@ import { Home } from "./pages/Home";
 import { Profile } from "./pages/Profile";
 import { Contact } from "./pages/Contact";
 import { Navbar } from "./pages/Navbar";
-import { useState } from "react";
+import {QueryClient, QueryClientProvider} from "@tanstack/react-query"
 
 function App() {
-  const [username, setUsername] = useState("AlbertTech");
+  const client = new QueryClient();
 
   return (
     <div className="App">
+      <QueryClientProvider client={client}>
       <Router>
         <Navbar />
         <Routes>
-          <Route path="/" element={<Home username={username} />} />
+          <Route path="/" element={<Home  />} />
           <Route
             path="/profile"
-            element={<Profile username={username} setUsername={setUsername} />}
+            element={<Profile  />}
           />
           <Route path="/contact" element={<Contact />} />
           <Route path="/*" element={<h1>Page not Found</h1>} />
         </Routes>
       </Router>
+      </QueryClientProvider>
     </div>
   );
 }
