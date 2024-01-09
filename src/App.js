@@ -7,9 +7,11 @@ import { Navbar } from "./pages/Navbar";
 import {QueryClient, QueryClientProvider} from "@tanstack/react-query"
 
 function App() {
+  const client = new QueryClient();
 
   return (
     <div className="App">
+      <QueryClientProvider client={client}>
       <Router>
         <Navbar />
         <Routes>
@@ -22,6 +24,7 @@ function App() {
           <Route path="/*" element={<h1>Page not Found</h1>} />
         </Routes>
       </Router>
+      </QueryClientProvider>
     </div>
   );
 }
