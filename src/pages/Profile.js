@@ -5,7 +5,6 @@ export const Profile = (props) => {
     <div>
       <h2>
         This is PROFILE page by:
-        <ChangeProfile />
       </h2>
     </div>
   );
