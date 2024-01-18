@@ -7,6 +7,8 @@ export const Home = () => {
   });
 
   return (
-    <p>{data.fact}</p>
+    <h2>
+      This is HOME page <p>{data.fact}</p>
+    </h2>
   );
 };
